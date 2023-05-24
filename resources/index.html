@@ -4,10 +4,10 @@
         <title>Cute bakery and café</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="apple-touch-icon" sizes="180x180" href="logo.jpg">
-        <link rel="icon" type="image/png" sizes="32x32" href="logo.jpg">
-        <link rel="icon" type="image/png" sizes="32x32" href="logo.jpg">
-        <link rel="manifest" sizes="32x32" href="logo.jpg">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/logo.jpg">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/logo.jpg">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/logo.jpg">
+        <link rel="manifest" sizes="32x32" href="img/logo.jpg">
         <link rel="stylesheet" href="style.css">
         
     </head>
@@ -17,56 +17,64 @@
         <menu>
             <div class="etc">
                 <nav class="menushka" >
-                    <a class="about" href="#4">Menu</a>
-                    <a class="about" href="#3">Contact</a>
-                    <a class="about" href="#1">About us</a>
-                    <a class="about" href="#2">Our team</a>
+                    <a class="about" name="change" href="#4">Menu</a>
+                    <a class="about" name="change" href="#3">Contact</a>
+                    <a class="about" name="change" href="#1">About us</a>
+                    <a class="about" name="change" href="#2">Our team</a>
                 </nav>
                 <div class="button">
-                    <button class="register btn1" data-easy-toggle="#hidden_modal2" data-easy-class="show2" type="button">Register</button>
-                    <button class="login btn2" data-easy-toggle="#hidden_modal1" data-easy-class="show1" type="submit">Login</button>
+                    <button class="register btn1" type="button" id="op-win1">Register</button>
+                    <button class="login btn2" type="submit" id="op-win2">Login</button>
                 </div>
             </div>                           
         </menu>
             <h1 class="title">Cute bakery and café!</h1>
-            <img class="kitty" src="namedlogo.jpg" alt="" height="160" width="160">     
+            <img class="kitty" src="img/namedlogo.jpg" alt="" height="160" width="160">     
             
         </header>
-        <div id="hidden_modal1" class="modal1 window1 show1">
-            <form method="login">
-                <h3 class="modal_title_log">Login</h3>
-                <div class="modal_data_log">
-                    <button class="close1">X</button>
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <button input class="log" type="submit">Login</button>
-                </div>
-            </form>
-        </div>
-            <div id="hidden_modal2" class="modal2 window2 show2 ">
-                <form method="reg">
-                    <h3 class="modal_title_reg">Register</h3>
-                    <button class="close2">X</button>
-                    <div class="modal_data_reg">
-                        <input type="text" placeholder="Username">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Surname">
-                        <input type="password" placeholder="Password">
-                        <input type="password" placeholder="Confirm the password">
-                        <input type="email" placeholder="Email">
-                        <input type="tel" placeholder="Your phone number">
-                        <div class="radio">
-                            <input type="radio"><div class="sex"> Male</div>
-                            <input type="radio"><div class="sex"> Female</div>
-                        </div>
-                    <button input class="reg" type="submit">Register</button>
-                        </div>
+        <aside>
+            <div id="popup1" class="modal1 window1 show">
+                <form method="login">
+                    <h3 class="modal_title_log">Login</h3>
+                    <div class="modal_data_log">
+                        <button id="close-log" class="close1">X</button>
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Password">
+                    <button input class="log" type="submit">Login</button>
+                    </div>
                 </form>
             </div>
+        </aside>
+            <aside>
+                <div id="popup2" class="modal2 window2 show">
+                    <form id="registration-form" method="reg">
+                      <h3 class="modal_title_reg">Register</h3>
+                      <button id="close-reg" class="close2">X</button>
+                      <div class="modal_data_reg">
+                        <input id="username-input" type="text" placeholder="Username">
+                        <input id="name-input" type="text" placeholder="Name">
+                        <input id="surname-input" type="text" placeholder="Surname">
+                        <input id="password-input" type="password" placeholder="Password">
+                        <input id="confirm-password-input" type="password" placeholder="Confirm the password">
+                        <input id="email-input" type="email" placeholder="Email">
+                        <input id="phone-input" type="tel" placeholder="Your phone number">
+                        <div class="radio">
+                          <input id="male-input" type="radio">
+                          <div class="sex">Male</div>
+                          <input id="female-input" type="radio">
+                          <div class="sex">Female</div>
+                        </div>
+                        <button id="sub-btn" class="reg" type="submit">Register</button>
+                        <input id="reset-button" type="reset" value="Reset All">
+                      </div>
+                    </form>
+                  </div>
+        </aside>
+        
         <main>                       
     <article>
         <section>
-            <div id="1" class="our_info">
+            <div id="1" name="first" class="our_info">
                 <h2>About us</h2>
             <div class="about_us">
                 Hate the idea of dining alone (or straight up just want more company)?
@@ -78,44 +86,44 @@
                 Open daily from 10 am – 10 pm.
             </div>
             <div class="img">
-            <img class="group_img" src="moomin.jpg" alt="" height="280" width="300">
-            <img class="group_img" src="molang.jpg" alt="" height="280" width="300">
-            <img class="group_img" src="bears.jpg" alt="" height="280" width="300">
+            <img class="group_img" src="img/moomin.jpg" alt="" height="280" width="300">
+            <img class="group_img" src="img/molang.jpg" alt="" height="280" width="300">
+            <img class="group_img" src="img/bears.jpg" alt="" height="280" width="300">
             </div>            
         </div>
         </section>
-        <div  id="2" class="our_team">
+        <div  id="2" name="sec" class="our_team">
             <h2>Our team!</h2>
         <div class="team">
             <h4 class="fonts_team">Our admin!</h4>
-            <img class="img_team" src="admin1.jpg" alt="" height="190" width="190">
+            <img class="img_team" src="img/admin1.jpg" alt="" height="190" width="190">
             <h4 class="fonts_team">Our chef!</h4>
-            <img class="img_team helper" src="helper.jpg" alt="" height="190" width="190">
+            <img class="img_team helper" src="img/helper.jpg" alt="" height="190" width="190">
             <h4 class="fonts_team">Our waitress!</h4>
-            <img class="img_team" src="waitress.jpg" alt="" height="190" width="190">
+            <img class="img_team" src="img/waitress.jpg" alt="" height="190" width="190">
         </div>
         </div>
-        <div id="4" class="menu1">
+        <div id="4" name="f4" class="menu1">
         <h2>Our delicious meals!</h2>
         <div class="food">
             <h4 class="fonts_food">Rolls and sushi!</h4>
-        <img class="menu_food" src="rolls.jpg" alt="" height="150" width="150">
+        <img class="menu_food" src="img/rolls.jpg" alt="" height="150" width="150">
         <h4 class="fonts_food fonts_cake">Cakes!</h4>
         <div class="yummy">
-        <img class="cakes" src="cake.jpg" alt="" height="150" width="150" >
-        <img class="cakes" src="cakes.jpg" alt="" height="150" width="150">
+        <img class="cakes" src="img/cake.jpg" alt="" height="150" width="150" >
+        <img class="cakes" src="img/cakes.jpg" alt="" height="150" width="150">
         </div>
         <h4 class="fonts_food">Lunch for children!</h4>
-        <img class="menu_food" src="forchild.jpg" alt="" height="150" width="150">
+        <img class="menu_food" src="img/forchild.jpg" alt="" height="150" width="150">
         </div>
             </div>
-            <div id="3" class="our_contacts question">
+            <div id="3" name="third" class="our_contacts question">
                 <h2>Contact us if you have any question!</h2>
             Dear customers,
             Our office in London is open from Monday to Friday between 9am and 6pm (closed on weekends and public holidays). We are also reachable by phone and email.
             Due to the increased demand and limited resources, a slight delay may be expected.
             </div>
-            <div class="side_info">
+            <div name="third" class="side_info">
             <h3>Our contact details and opening hours</h3>
             <div class="contacts_text">
             <h4 class="contacts">Our email</h4>
@@ -132,30 +140,30 @@
                 <h2>Our menu schedule</h2>
                 <TABLE class="table" BORDER="1" WIDTH=100% BGCOLOR="#CCCCFF">
                     <TR BGCOLOR="#CCCCFF" ALIGN="CENTER">
-                    <TD> </TD> <TD>Sun</TD> <TD>Mon</TD> 
-                    <TD>Tue</TD> <TD>Wed</TD> <TD>Thur</TD>
-                    <TD>Fri</TD> <TD>Sat</TD>
+                    <TD> </TD> <TD name="col">Sun</TD> <TD name="col">Mon</TD> 
+                    <TD name="col">Tue</TD> <TD name="col">Wed</TD> <TD name="col">Thur</TD>
+                    <TD name="col">Fri</TD> <TD name="col">Sat</TD>
                     </TR>
                     <TR BGCOLOR="pink" ALIGN="CENTER">
-                    <TD BGCOLOR="#CCCCFF">1</TD> <TD>1. Special dishes</TD>
-                    <TD>2. Speacial dishes for children</TD> <TD>3. Kushiyaki</TD> <TD>4. Miso Soup</TD>
-                    <TD>5. Banchan</TD> <TD>6. Pho</TD> <TD>7. Sashimi</TD>
+                    <TD BGCOLOR="#CCCCFF">1</TD> <TD name="1">1. Special dishes</TD>
+                    <TD name="2">2. Speacial dishes for children</TD> <TD name="3">3. Kushiyaki</TD> <TD name="4">4. Miso Soup</TD>
+                    <TD name="5">5. Banchan</TD> <TD name="6">6. Pho</TD> <TD name="7">7. Sashimi</TD>
                     </TR>
                     <TR BGCOLOR="beige" ALIGN="CENTER">
-                    <TD BGCOLOR="#CCCCFF">2</TD> <TD>1. Daifuku</TD>
-                    <TD>2. Karē</TD> <TD>3. Tteok</TD><TD>4. Kimbap</TD>
-                    <TD>5. Nigiri</TD> <TD>6. Bibimbap</TD> <TD>7. Tonkatsu</TD>
+                    <TD BGCOLOR="#CCCCFF">2</TD> <TD name="1">1. Daifuku</TD>
+                    <TD name="2">2. Karē</TD> <TD name="3">3. Tteok</TD><TD name="4">4. Kimbap</TD>
+                    <TD name="5">5. Nigiri</TD> <TD name="6">6. Bibimbap</TD> <TD name="7">7. Tonkatsu</TD>
                     </TR>
                     <TR BGCOLOR="pink" ALIGN="CENTER">
-                    <TD BGCOLOR="#CCCCFF">3</TD> <TD>1. Sukiyaki</TD>
-                    <TD>2. Chocolate milk</TD> <TD>3. Bubble tea</TD> <TD>4. Fried potato</TD>
-                    <TD>5. Spring Rolls with fruits</TD> <TD>6. Mooncake</TD> <TD>7. Wagashi</TD>
+                    <TD BGCOLOR="#CCCCFF">3</TD> <TD name="1">1. Sukiyaki</TD>
+                    <TD name="2">2. Chocolate milk</TD> <TD name="3">3. Bubble tea</TD> <TD name="4">4. Fried potato</TD>
+                    <TD name="5">5. Spring Rolls with fruits</TD> <TD name="6">6. Mooncake</TD> <TD name="7">7. Wagashi</TD>
                     </TR>
                     <TR BGCOLOR="beige" ALIGN="CENTER">
-                        <TD BGCOLOR="#CCCCFF">4</TD> <TD>1.  Iced Chinese Chrysanthemum Tea</TD>
-                        <TD>2. Lunch for children</TD> <TD>3. Dondurma</TD> <TD>4. Vietnamese-Style Frappuccinos</TD>
-                        <TD>5.  Korean Barley Tea (Boricha)</TD> <TD>6.  Vietnamese Salty Lemonade (Chanh Muoi)</TD> 
-                        <TD>7.  Indian Papaya Lassi with Cardamom </TD>
+                        <TD BGCOLOR="#CCCCFF">4</TD> <TD name="1">1.  Iced Chinese Chrysanthemum Tea</TD>
+                        <TD name="2">2. Lunch for children</TD> <TD name="3">3. Dondurma</TD> <TD name="4">4. Vietnamese-Style Frappuccinos</TD>
+                        <TD name="5">5.  Korean Barley Tea (Boricha)</TD> <TD name="6">6.  Vietnamese Salty Lemonade (Chanh Muoi)</TD> 
+                        <TD name="7">7.  Indian Papaya Lassi with Cardamom </TD>
                         </TR>           
                          
                     </TABLE>
@@ -196,4 +204,45 @@
             
         </footer>
     </body>
+    <script>
+       document.getElementById("reset-button").addEventListener("click", function(event) {
+    event.preventDefault(); // Предотвращаем действие по умолчанию
+
+    // Отображаем диалоговое окно запроса на подтверждение
+    var confirmed = confirm("Are you sure you want to reset the form?");
+
+    if (confirmed) {
+      // Если пользователь подтверждает, то сбрасываем поля формы
+      document.getElementById("registration-form").reset();
+
+      // Изменяем цвет фона каждого поля на красный цвет в течение одной секунды
+      var fields = document.getElementsByClassName("modal_data_reg")[0].querySelectorAll("input[type='text'], input[type='password'], input[type='email'], input[type='tel']");
+      for (var i = 0; i < fields.length; i++) {
+        fields[i].style.backgroundColor = "red";
+      }
+
+      // Через одну секунду восстанавливаем цвет фона каждого поля
+      setTimeout(function() {
+        for (var i = 0; i < fields.length; i++) {
+          fields[i].style.backgroundColor = "";
+        }
+      }, 1000);
+    } else {
+      // Если пользователь отменяет, то меняем цвет фона каждого поля на зеленый в течение одной секунды
+      var fields = document.getElementsByClassName("modal_data_reg")[0].querySelectorAll("input[type='text'], input[type='password'], input[type='email'], input[type='tel']");
+      for (var i = 0; i < fields.length; i++) {
+        fields[i].style.backgroundColor = "green";
+      }
+      setTimeout(function() {
+        for (var i = 0; i < fields.length; i++) {
+          fields[i].style.backgroundColor = "";
+        }
+      }, 1000);
+    }
+  });
+    </script>
+    <script src="script.js"></script>
+    <script src="shadows.js"></script>
+    <script src="aside.js"></script>
+    <script src="sub.js"></script>
 </html>
